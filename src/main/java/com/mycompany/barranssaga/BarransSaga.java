@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 public class BarransSaga {
     
-    private static BarransSaga barrans = new BarransSaga();
+    private static final BarransSaga Barrans = new BarransSaga();
     
     public static void main(String[] args) {
         ArrayList <Long> yearList = new ArrayList<>();
@@ -59,7 +59,7 @@ public class BarransSaga {
             if (invalidInput) {
                 System.out.print("\nAverage number of people the witch killed : -1");
             } else {
-                System.out.print("\nAverage number of people the witch killed : " + barrans.calculateAvg (yearList));
+                System.out.print("\nAverage number of people the witch killed : " + Barrans.calculateAvg (yearList));
             }
         } catch (Exception e) {
             System.out.println("Wrong input, number of person, age and year can only accept integer value: " + e);
