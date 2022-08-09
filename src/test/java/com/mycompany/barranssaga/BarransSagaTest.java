@@ -52,6 +52,10 @@ public class BarransSagaTest {
         
         yearList.add(Long.valueOf(10 - 100));
         assertEquals(new BigDecimal(-1), barrans.calculateAvg(yearList));
+        
+        yearList.add(Long.valueOf(10000 - 1000));
+        yearList.add(Long.valueOf(10000000 - 100000));
+        assertEquals(new BigDecimal(19558412), barrans.calculateAvg(yearList));
     }
     
 }
